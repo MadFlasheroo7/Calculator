@@ -1,3 +1,59 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="display">Enter a value</string>
+    <string-array name="data_Measurement">
+        <item>MegaBytes (MB)</item>
+        <item>KiloBytes (KB)</item>
+        <item>GigaBytes (GB)</item>
+        <item>TeraBytes (TB)</item>
+    </string-array>
+    <string-array name="data_Measurement2">
+        <item>KiloBytes (KB)</item>
+        <item>MegaBytes (MB)</item>
+        <item>GigaBytes (GB)</item>
+        <item>TeraBytes (TB)</item>
+    </string-array>
+    <string name="megabyte">MB</string>
+    <string name="kilobyte">KB</string>
+    <string name="gigabyte">GB</string>
+    <string name="terabyte">TB</string>
+
+    <string name="MB">MegaBytes (MB)</string>
+    <string name="KB">KiloBytes (KB)</string>
+    <string name="GB">GigaBytes (GB)</string>
+    <string name="TB">TeraBytes (TB)</string>
+
+    <string-array name="currencies">
+        <item>USD</item>
+        <item>INR</item>
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>CNY</item>
+    </string-array>
+    <string-array name="currencies2">
+        <item>INR</item>
+        <item>USD</item>
+        <item>CAD</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>CNY</item>
+    </string-array>
+    <string name="INR">rs₹</string>
+    <string name="USD">us$</string>
+    <string name="CAD">ca$</string>
+    <string name="EUR">eu€</string>
+    <string name="GBP">gbp£</string>
+    <string name="CNY">cny¥</string>
+
+    <string name="title">More Info</string>
+    <string name="infoMSG">This Currency converter is based on <b>exchangeratesapi.io</b> and it might not very accurate as it get updated at every 4PM (IST)
+        \n<b><u>Supported Countries</u></b>\n
+        \n<b>*</b> INR - Indian Rupees (₹)
+        \n<b>*</b> USD - US Dollar ($)
+        \n<b>*</b> CAD - Canadian Dollar (ca$)
+        \n<b>*</b> EUR - European Euro (eu€)
+        \n<b>*</b> GBP - British pound sterling (gbp£)
+        \n<b>*</b> CNY - Chinese yuan (cny¥)
+    </string>
 </resources>

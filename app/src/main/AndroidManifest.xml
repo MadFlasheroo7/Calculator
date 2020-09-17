@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.calculator">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Extras"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Age"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".Time" />
+        <activity android:name=".Data" />
+        <activity android:name=".Mass" />
+        <activity android:name=".Currency" />
+        <activity android:name=".Programmer" />
+        <activity android:name=".Extras" />
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
