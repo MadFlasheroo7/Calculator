@@ -23,6 +23,7 @@ class Data : AppCompatActivity() {
         spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(adapterView: AdapterView<*>?,view: View?,position: Int,id: Long) {
                 spinnerItem()
+                editScreen1.requestFocus()
                 editScreen1.setText("")
                 editScreen2.setText("")
             }
@@ -36,21 +37,6 @@ class Data : AppCompatActivity() {
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
         }
-//        editScreen1.setOnClickListener(View.OnClickListener {
-//            try {
-//                if (getString(R.string.display) == calcScreen.text.toString()) {
-//                    calcScreen.setText("")
-//                }
-//            }catch (e:Exception){
-//
-//            }
-//        })
-//        editScreen2.setOnClickListener(View.OnClickListener {
-//
-//            if (getString(R.string.display) == calcScreen.text.toString()) {
-//                calcScreen.setText("")
-//            }
-//        })
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) { // API 21
             editScreen1.showSoftInputOnFocus = false
@@ -202,6 +188,19 @@ class Data : AppCompatActivity() {
             }
         })
 
+        btnDot.setOnClickListener {
+            if (editScreen1.hasFocus()) {
+                ed1(".")
+                updateKBtoMB()
+                updateGBtoKB()
+                updateMBtoGB()
+            } else {
+                ed2(".")
+                updateKBtoMB()
+                updateGBtoKB()
+                updateMBtoGB()
+            }
+        }
         btnclearAll.setOnClickListener {
             editScreen1.setText("")
             editScreen2.setText("")
@@ -244,14 +243,6 @@ class Data : AppCompatActivity() {
                 }
             }
     }
-//    private fun auto(){
-//        //given num / 1024
-//        str1 = editScreen1.text.toString()
-//        val value = 1024
-//        val result = str1.toFloat() / value
-//        val final = result.toBigDecimal()
-//        editScreen2.setText("$final")
-//    }
     private fun updateKBtoMB(){
         val spinner1Item = spinner1.selectedItem.toString()
         val spinner2Item = spinner2.selectedItem.toString()

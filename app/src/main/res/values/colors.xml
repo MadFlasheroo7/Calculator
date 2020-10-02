@@ -2,6 +2,16 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#00B8D4</color>
     <color name="cc">#B781FF</color>
+    <color name="text">#000</color>
+    <color name="colorBlack">#000</color>
+    <color name="numberBtn">#000cbf</color>
+    <color name="redbtnBg">#FFA7B9</color>
+    <color name="redbtnText">#cf002a</color>
+    <color name="orangebtnBG">#FFC496</color>
+    <color name="orangeText">#F86C00</color>
+    <color name="bgGreen">#92FA97</color>
+    <color name="greenText">#008107</color>
+    <color name="numberBtnRipple">#9da8fa</color>
 </resources>

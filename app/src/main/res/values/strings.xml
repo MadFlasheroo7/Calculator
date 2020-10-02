@@ -46,6 +46,35 @@
     <string name="GBP">gbp£</string>
     <string name="CNY">cny¥</string>
 
+    <string-array name="time_measurement">
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>MilliSeconds</item>
+        <item>Hours</item>
+        <item>Days</item>
+    </string-array>
+
+    <string-array name="time_measurement2">
+        <item>Minutes</item>
+        <item>Seconds</item>
+        <item>MilliSeconds</item>
+        <item>Hours</item>
+        <item>Days</item>
+    </string-array>
+    <string name="Minutes">MM</string>
+    <string name="Seconds">SS</string>
+    <string name="Hours">HH</string>
+    <string name="Milliseconds">MSS</string>
+    <string name="Days">DD</string>
+
+    <string name="MM">Minutes</string>
+    <string name="SS">Seconds</string>
+    <string name="HH">Hours</string>
+    <string name="YY">Years</string>
+    <string name="MSS">MilliSeconds</string>
+    <string name="WW">Weeks</string>
+    <string name="DD">Days</string>
+
     <string name="title">More Info</string>
     <string name="infoMSG">This Currency converter is based on <b>exchangeratesapi.io</b> and it might not very accurate as it get updated at every 4PM (IST)
         \n<b><u>Supported Countries</u></b>\n
@@ -56,4 +85,18 @@
         \n<b>*</b> GBP - British pound sterling (gbp£)
         \n<b>*</b> CNY - Chinese yuan (cny¥)
     </string>
+
+    <string name="celsius">℃</string>
+    <string name="Fahrenheit">℉</string>
+    <string name="Kelvin">K</string>
+    <string-array name="temp_convertion">
+        <item>celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string-array name="temp_convertion2">
+        <item>Fahrenheit</item>
+        <item>celsius</item>
+        <item>Kelvin</item>
+    </string-array>
 </resources>

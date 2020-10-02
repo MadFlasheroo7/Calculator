@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="cc">#B781FF</color>
+    <color name="text">#fff</color>
+    <color name="colorBlack">#FFFFFF</color>
+    <color name="numberBtn">#00C5B9</color>
+    <color name="redbtnBg">#EFAFBC</color>
+    <color name="redbtnText">#800019</color>
+    <color name="orangebtnBG">#FBC091</color>
+    <color name="bgGreen">#7CD380</color>
+    <color name="greenText">#006305</color>
+    <color name="orangeText">#BD5000</color>
+    <color name="numberBtnRipple">#A2FBF6</color>
+</resources>

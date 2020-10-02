@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Time">
+    tools:context=".Temperature">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                         android:layout_margin="0dp"
                         android:animateLayoutChanges="true"
                         android:backgroundTint="@color/colorBlack"
-                        android:entries="@array/time_measurement"
+                        android:entries="@array/temp_convertion"
                         android:gravity="start"
                         android:hapticFeedbackEnabled="true"
                         android:padding="0dp"
@@ -111,7 +111,7 @@
                         android:layout_margin="0dp"
                         android:animateLayoutChanges="true"
                         android:backgroundTint="@color/colorBlack"
-                        android:entries="@array/time_measurement2"
+                        android:entries="@array/temp_convertion2"
                         android:gravity="start"
                         android:hapticFeedbackEnabled="true"
                         android:padding="0dp"
@@ -400,17 +400,12 @@
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:insetLeft="0dp"
-                android:insetTop="0dp"
-                android:insetRight="0dp"
-                android:insetBottom="0dp"
-                android:padding="0dp"
                 android:text="0"
                 android:textColor="@color/numberBtn"
                 app:rippleColor="@color/numberBtnRipple"
-                android:textSize="30sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
-                app:cornerRadius="100dp" />
+                app:cornerRadius="30dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/Down"
@@ -483,4 +478,5 @@
 
         </LinearLayout>
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

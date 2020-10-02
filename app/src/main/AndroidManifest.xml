@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Age"></activity>
+        <activity android:name=".Temperature"></activity>
+        <activity android:name=".Scientific" />
+        <activity android:name=".Age" />
         <activity android:name=".About" />
         <activity android:name=".Time" />
         <activity android:name=".Data" />

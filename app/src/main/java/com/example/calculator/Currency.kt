@@ -12,14 +12,25 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_currency.*
-import kotlinx.android.synthetic.main.activity_data.*
+import kotlinx.android.synthetic.main.activity_currency.button0
+import kotlinx.android.synthetic.main.activity_currency.button1
+import kotlinx.android.synthetic.main.activity_currency.button2
+import kotlinx.android.synthetic.main.activity_currency.button3
+import kotlinx.android.synthetic.main.activity_currency.button4
+import kotlinx.android.synthetic.main.activity_currency.button5
+import kotlinx.android.synthetic.main.activity_currency.button6
+import kotlinx.android.synthetic.main.activity_currency.button7
+import kotlinx.android.synthetic.main.activity_currency.button8
+import kotlinx.android.synthetic.main.activity_currency.button9
+import kotlinx.android.synthetic.main.activity_currency.buttonDelete
+import kotlinx.android.synthetic.main.activity_currency.buttonDot
+import kotlinx.android.synthetic.main.activity_time.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import java.net.URL
-
 class Currency : AppCompatActivity() {
 //    var baseCurrency = "USD"
 //    var toCurrency = "INR"
@@ -27,68 +38,26 @@ class Currency : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_currency)
-        spinnerItem()
+        currySpin1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                spinnerItem()
+                editText1.requestFocus()
+                editText1.setText("")
+                editText2.setText("")
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+        }
+        currySpin2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(adapterView: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                spinnerItem()
+                editText1.setText("")
+                editText2.setText("")
+            }
+            override fun onNothingSelected(p0: AdapterView<*>?) {}
+        }
         info.setOnClickListener {
             dialogBox()
         }
-//        spinnerItem()
-//        spinnerItem2()
-//        if (editText1.hasFocus()){
-//            var baseCurrency = currySpin1.selectedItem.toString()
-//            var toCurrency = currySpin2.selectedItem.toString()
-//            currySpin1.onItemSelectedListener = (object  : AdapterView.OnItemSelectedListener{
-//                override fun onItemSelected(parent: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-//                    baseCurrency = parent?.getItemAtPosition(position).toString()
-//                    apiResult()
-//                    spinnerItem()
-//                    spinnerItem2()
-//                }
-//                override fun onNothingSelected(p0: AdapterView<*>?) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//            currySpin2.onItemSelectedListener = (object  : AdapterView.OnItemSelectedListener{
-//                override fun onItemSelected(parent: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-//                    toCurrency = parent?.getItemAtPosition(position).toString()
-//                    apiResult()
-//                    spinnerItem()
-//                    spinnerItem2()
-//                }
-//                override fun onNothingSelected(p0: AdapterView<*>?) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//        }
-//        if (editText2.hasFocus()){
-//            var baseCurrency = currySpin2.selectedItem.toString()
-//            var toCurrency = currySpin1.selectedItem.toString()
-//            currySpin2.onItemSelectedListener = (object  : AdapterView.OnItemSelectedListener{
-//                override fun onItemSelected(parent: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-//                    baseCurrency = parent?.getItemAtPosition(position).toString()
-//                    apiResult()
-//                    spinnerItem()
-//                    spinnerItem2()
-//                }
-//                override fun onNothingSelected(p0: AdapterView<*>?) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//            currySpin1.onItemSelectedListener = (object  : AdapterView.OnItemSelectedListener{
-//                override fun onItemSelected(parent: AdapterView<*>?, p1: View?, position: Int, p3: Long) {
-//                    toCurrency = parent?.getItemAtPosition(position).toString()
-//                    apiResult()
-//                    spinnerItem()
-//                    spinnerItem2()
-//                }
-//                override fun onNothingSelected(p0: AdapterView<*>?) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//        }
         spinners()
         textUpdate()
 
@@ -295,6 +264,7 @@ class Currency : AppCompatActivity() {
                             Log.d("Main",apiResult)
                             withContext(Dispatchers.Main){
                                 val text = ((editText1.text.toString().toFloat()) * convertionRate).toString()
+//                                val finalResult = text.toInt()
                                 editText2?.setText(text)
                             }
                         }catch (e:Exception){

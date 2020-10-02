@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_extras.*
+import kotlinx.android.synthetic.main.activity_extras_content.*
 
 class Extras : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,9 +39,13 @@ class Extras : AppCompatActivity() {
             val intent = Intent(this,Age::class.java)
             startActivity(intent)
         })
-        about.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this,About::class.java)
+        temprature.setOnClickListener {
+            val intent = Intent(this,Temperature::class.java)
             startActivity(intent)
-        })
+        }
+//        about.setOnClickListener(View.OnClickListener {
+//            val intent = Intent(this,About::class.java)
+//            startActivity(intent)
+//        })
     }
 }
